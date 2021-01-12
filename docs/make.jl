@@ -15,6 +15,6 @@ Documenter.makedocs(
     ]
 )
 
-deploydocs(;
+deploydocs(
     repo  =  "github.com/jakewilliami/BestApproximation.jl.git",
 )
