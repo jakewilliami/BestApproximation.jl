@@ -11,3 +11,15 @@
 Given a potentially very large number, it is sometimes nice to approximate this.  To find the "best", or "nicest" approximation, usually we restrict the base of an exponent, so that your given number ``n`` is approximately ``b^x``.  The idea is that ``b^x`` is nicer looking than your input.  
 
 This is a very small package exporting a function to find `b` and `x`, given a range `b` can be in.
+
+## Quick Start
+
+```julia
+julia> using BestApproximation
+
+julia> best_approx(123, 20)  # The second parameter is the maximum number for the base (i.e., it returns 11^2, with 11 < 20).  You can also specify the range of the exponent, but this variant is much slower.
+(11, 2)
+
+julia> ^(best_approx(123, 20)...)  # Notice how 11^2 approximates to 121---only 2 numbers off the given number.
+121
+```
