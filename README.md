@@ -14,7 +14,7 @@ This is a very small package exporting a function to find `b` and `x`, given a r
 
 ## Quick Start
 
-```julia
+```julia-repl
 julia> using BestApproximation
 
 julia> best_approx(123, 20)  # The second parameter is the maximum number for the base (i.e., it returns 11^2, with 11 < 20).  You can also specify the range of the exponent, but this variant is much slower.
